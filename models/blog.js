@@ -1,12 +1,11 @@
-class Resource {
-constructor(name, location, description, owner) {
-this.name = name;
+class Blog {
+constructor(title,body ,date) {
+this.title = title;
+this.body = body;
 this.location = location;
-this.description = description;
-this.owner = owner;
-const timestamp = new Date().getTime();
+this.date = date;
 const random = Math.floor(Math.random() * 1000);
-this.id = timestamp + "" + random.toString().padStart(3, '0');
+this.id = random.toString().padStart(3, '0');
 }
 }
 module.exports = { Resource };
