@@ -9,12 +9,15 @@ async function readJSON(filename) {
 async function viewBlogs(req, res) {
     try {
         const allPosts = await readJSON('utils/posts.json');
-        console.log(allPosts);
-        return res.status(201).json(allPosts);
+        const filterDate = req.params.filter_date;
+        const filteredPosts = filterDate ? allPosts.filter(post => post.date === filterDate) : allPosts;
+
+        res.status(200).json(filteredPosts);
     } catch (error) {
-        return res.status(500).json({ message: error.message });
+        res.status(500).json({ message: error.message });
     }
 }
+
 module.exports = {
     viewBlogs
 };

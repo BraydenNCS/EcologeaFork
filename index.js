@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 
 const { viewBlogs } = require('./utils/BlogsUtils')
 
-app.get('/view-blogs', viewBlogs);
+app.get('/view-blogs/:filter_date', viewBlogs);
 
 
 server = app.listen(PORT, function () {
