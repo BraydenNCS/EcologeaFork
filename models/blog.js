@@ -1,5 +1,5 @@
 class Blog {
-constructor(title,body ,date) {
+constructor(title,body ,location,date) {
 this.title = title;
 this.body = body;
 this.location = location;
@@ -8,4 +8,4 @@ const random = Math.floor(Math.random() * 1000);
 this.id = random.toString().padStart(3, '0');
 }
 }
-module.exports = { Resource };
+module.exports = { Blog };
