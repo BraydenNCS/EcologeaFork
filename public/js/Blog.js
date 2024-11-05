@@ -2,7 +2,7 @@ function viewBlogsFiltered(filter_date) {
     console.log("Called");
     var response = '';
     var request = new XMLHttpRequest();
-    request.open('GET', '/view-blogs/null', true);
+    request.open('GET', '/view-blogs/default', true);
     request.setRequestHeader('Content-Type', 'application/json');
     request.onload = function () {
         response = JSON.parse(request.responseText);
