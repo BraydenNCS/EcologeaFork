@@ -1,26 +1,33 @@
 function viewBlogsFiltered(filter_date) {
-    console.log("Called");
+    console.log(filter_date);
     var response = '';
     var request = new XMLHttpRequest();
-    request.open('GET', '/view-blogs/default', true);
+    request.open('GET', '/view-blogs/' + filter_date, true);
     request.setRequestHeader('Content-Type', 'application/json');
     request.onload = function () {
         response = JSON.parse(request.responseText);
         var html = ''
         for (var i = 0; i < response.length; i++) {
-            if (response[i].date == filter_date || filter_date == null) {
-                html += "<td class='cell'><h4 class='title_display'>" +
-                    response[i].title +
-                    "<h4>" +
-                    "<p class=body_display>" +
-                    response[i].body +
-                    "</p>" +
-                    "<p class='date_display'>$" +
-                    response[i].date +
-                    "</p>"
-            }
+            html += "<td class='cell'><h4 class='title_display'>" +
+                response[i].title +
+                "<h4>" +
+                "<p class=body_display>" +
+                response[i].body +
+                "</p>" +
+                "<p class='date_display'>$" +
+                response[i].date +
+                "</p>"
         }
-        document.getElementById('tableContent').innerHTML = html;
+        document.getElementById('tableContent').innerHTML =
+            html == '' ? "There were no posts made on this day. Please try resetting your filter." : html;
     };
     request.send();
+}
+function filter() {
+    filter_date = document.getElementById("filter_date").value;
+    if (filter_date === "") {
+        filter_date = "default"
+    }
+    console.log(filter_date);
+    viewBlogsFiltered(filter_date);
 }

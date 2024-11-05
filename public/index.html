@@ -7,10 +7,12 @@
     <script src="js/Blog.js"></script>
 
 </head>
-<body onload="viewBlogsFiltered()">
-    <input type="date"></input>
-    <button onclick="filter()"></button>
-    <table id="tableContent"></table>
+<body onload="viewBlogsFiltered('default')">
+    <input type="date" id="filter_date"></input>
+    <button onclick="filter()">Filter</button>
+    <table id="tableContent">
+        <td>Sorry, There are no posts yet.
+    </td></table>
 </body>
 </html>
 
