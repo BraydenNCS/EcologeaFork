@@ -9,6 +9,7 @@ async function readJSON(filename) {
 async function viewBlogs(req, res) {
     try {
         const allPosts = await readJSON('utils/posts.json');
+        console.log(allPosts);
         return res.status(201).json(allPosts);
     } catch (error) {
         return res.status(500).json({ message: error.message });
