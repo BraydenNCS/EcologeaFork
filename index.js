@@ -6,8 +6,9 @@ var startPage = "index.html";
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("./public"));
-const { addResource } = require('./utils/BlogsUtils')
-app.post('/add-resource', addResource);
+const { deleteResource,viewPosts } = require('./utils/BlogsUtils')
+app.get('/view-resources', viewPosts);
+app.delete('/delete-resource/:id', deleteResource);
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
 })
