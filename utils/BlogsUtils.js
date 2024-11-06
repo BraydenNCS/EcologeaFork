@@ -10,7 +10,6 @@ async function viewBlogs(req, res) {
     try {
         const allPosts = await readJSON('utils/posts.json');
         const filterDate = req.params.filter_date;
-        console.log("A" + filterDate);
         const filteredPosts = filterDate != "default" ? allPosts.filter(post => post.date === filterDate) : allPosts;
 
         res.status(200).json(filteredPosts);

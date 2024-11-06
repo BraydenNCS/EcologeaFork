@@ -1,5 +1,4 @@
 function viewBlogsFiltered(filter_date) {
-    console.log(filter_date);
     var response = '';
     var request = new XMLHttpRequest();
     request.open('GET', '/view-blogs/' + filter_date, true);
@@ -8,13 +7,13 @@ function viewBlogsFiltered(filter_date) {
         response = JSON.parse(request.responseText);
         var html = ''
         for (var i = 0; i < response.length; i++) {
-            html += "<td class='cell'><h4 class='title_display'>" +
+            html += "<td class='cell'><h1 class='title_display'>" +
                 response[i].title +
-                "<h4>" +
+                "</h1>" +
                 "<p class=body_display>" +
                 response[i].body +
                 "</p>" +
-                "<p class='date_display'>$" +
+                "<p class='date_display'>Date:" +
                 response[i].date +
                 "</p>"
         }
