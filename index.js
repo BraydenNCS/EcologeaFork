@@ -2,13 +2,13 @@ var express = require('express');
 var bodyParser = require("body-parser");
 var app = express();
 const PORT = process.env.PORT || 5050
-var startPage = "index.html";
+var startPage = "edit.html";
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("./public"));
-const { deleteResource,viewPosts } = require('./utils/BlogsUtils')
-app.get('/view-resources', viewPosts);
-app.delete('/delete-resource/:id', deleteResource);
+const { deletePost,viewPosts } = require('./utils/DeleteBlogsUtils')
+app.get('/view-posts', viewPosts);
+app.delete('/delete-post/:id', deletePost);
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
 })
