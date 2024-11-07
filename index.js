@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
 })
 
-const { viewBlogs } = require('./utils/BlogsUtils')
+const { viewBlogs } = require('./utils/ReadBlogsUtils')
 
 app.get('/view-blogs/:filter_date', viewBlogs);
 

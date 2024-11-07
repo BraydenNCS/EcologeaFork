@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecologea</title>
-    <script src="js/Blog.js"></script>
+    <script src="js/ReadBlog.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
 <body onload="viewBlogsFiltered('default')">
-    <input type="date" id="filter_date"></input>
-    <button onclick="filter()">Filter</button>
+    <div class="filter-container">
+        <input type="date" id="filter_date">
+        <button onclick="filter()">Filter</button>
+    </div>
     <table id="tableContent">
         <td>Sorry, There are no posts yet.
     </td></table>

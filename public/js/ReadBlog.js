@@ -13,7 +13,7 @@ function viewBlogsFiltered(filter_date) {
                 "<p class=body_display>" +
                 response[i].body +
                 "</p>" +
-                "<p class='date_display'>Date:" +
+                "<p class='date_display'>Published:" +
                 response[i].date +
                 "</p>"
         }
