@@ -26,11 +26,16 @@ function viewPosts() {
 // Confirm deletion function
 function confirmDelete(selectedId) {
     $('#resourceModal').modal('show');
+    document.getElementById("confirmDeleteButton").focus()
     document.getElementById('confirmDeleteButton').onclick = function() {
         var confirmInput = document.getElementById('confirmDelete').value;
         if (confirmInput === 'Confirm') {
             deletePost(selectedId, confirmInput);
-        } else {
+        } 
+        else if(confirmInput === ''){
+            alert('Please use your keyboard to type a word')
+        }
+        else {
             alert('Please enter "Confirm" to proceed with deletion.\nYou entered \''+confirmInput+'\'');
         }
     };
@@ -43,9 +48,8 @@ function deletePost(selectedId, confirmDelete) {
     request.setRequestHeader('Content-Type', 'application/json');
     request.onload = function () {
         response = JSON.parse(request.responseText);
-        alert(response.message)
         if (response.message === "Resource deleted successfully!") {
-            console.log('hello')
+            alert(response.message)
             window.location.href = 'index.html';
         } else {
             alert('Unable to delete resource!');
