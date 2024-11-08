@@ -20,9 +20,9 @@ async function addPost(req, res) {
     try {
         const title = req.body.title;
         const body = req.body.body;
-        const date = new Date();
+        const date = req.body.date;
 
-        const newBlog = new Blog(body, title, date);
+        const newBlog = new Blog(title, body, date);
         const updatedBlogs = await writeJSON(newBlog,
             'utils/posts.json');
         return res.status(201).json(updatedBlogs);
