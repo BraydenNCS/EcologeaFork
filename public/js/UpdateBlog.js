@@ -1,7 +1,7 @@
 function editPost(data) {
     var selectedPost = JSON.parse(data);
     document.getElementById("editTitle").value = selectedPost.title;
-    document.getElementById("editDesc").value = selectedPost.body;
+    document.getElementById("editDesc").value = selectedPsost.body;
     document.getElementById("updateButton").setAttribute("onclick", 'updatePost("' +
         selectedPost.id + '")');
     $('#editPostModal').modal('show');
