@@ -1,5 +1,2 @@
 # ignore Node.js dependencies
 node_modules/
-
-# ignore json file with posts
-/utils/posts.json
