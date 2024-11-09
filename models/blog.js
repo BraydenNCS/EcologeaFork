@@ -1,5 +1,5 @@
 class Blog {
-constructor(title,body ,date) {
+constructor(title,body,date) {
 this.title = title;
 this.body = body;
 this.date = date;

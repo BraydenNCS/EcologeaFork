@@ -9,18 +9,25 @@ app.use(bodyParser.json());
 app.use(express.static("./public"));
 
 const { updatePost } = require('./utils/UpdateBlogsUtils')
-
 app.put('/update-post/:id', updatePost);
-
+const { deletePost,viewPosts } = require('./utils/DeleteBlogsUtils')
+app.get('/view-posts', viewPosts);
+app.delete('/delete-post/:id', deletePost);
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
 })
+
+const { viewBlogs } = require('./utils/ReadBlogsUtils')
+
+app.get('/view-blogs/:filter_date', viewBlogs);
+const { addPost } = require('./utils/AddBlogsUtils')
+app.post('/add-post', addPost);
 
 server = app.listen(PORT, function () {
     const address = server.address();
     const baseUrl = `http://${address.address == "::" ? 'localhost' :
         address.address}:${address.port}`;
-    console.log(`Server running at: ${baseUrl}/edit.html`);
-});
 
+    console.log(`Server running at: ${baseUrl}`);
+});
 module.exports = { app, server }
