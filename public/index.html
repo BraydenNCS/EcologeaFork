@@ -1,10 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecologea</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!--connect to AddBlogs.js-->
+    <script src="js/AddBlogs.js"></script>
+    <!---->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+    <!-- Navigation Bar -->
+    <div id="nav">
+        <button id="add" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addPostModal">
+            Add Post
+        </button>
+        <h1 id="app"> Ecologea </h1>
+        <button id="account" type="button" class="btn btn-primary" onclick="window.location.href = 'edit.html'"> Account </button>
+    </div>
+    <!-- Navigation Bar -->
+    <td id="blogs"></td>
+
+    <!--Add Post Modal -->
+    <div class="modal fade" id="addPostModal" tabindex="-1" role="dialog" aria-labelledby="resourceModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resourceModalLabel">Create New Post</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="title">Title:</label>
+                            <input type="text" class="form-control" id="title" placeholder="Title" maxlength="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="body">Description:</label>
+                            <textarea class="form-control" id="body" placeholder="description" rows="6" maxlength="1000"></textarea>
+                        </div>
+                        <p align="right" id="message" class=""></p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data- dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addPost()">Add New Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Add Post Modal -->
 </body>
+
 </html>

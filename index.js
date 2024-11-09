@@ -12,6 +12,10 @@ app.delete('/delete-post/:id', deletePost);
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
 })
+
+const { addPost } = require('./utils/AddBlogsUtils')
+app.post('/add-post', addPost);
+
 server = app.listen(PORT, function () {
     const address = server.address();
     const baseUrl = `http://${address.address == "::" ? 'localhost' :
