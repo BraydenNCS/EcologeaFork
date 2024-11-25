@@ -7,4 +7,4 @@ class Blog {
         this.id = random.toString().padStart(3, '0');
     }
 }
-module.exports = { Resource };
+module.exports = { Blog };
