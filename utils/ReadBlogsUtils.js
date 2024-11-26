@@ -10,6 +10,7 @@ async function viewBlogs(req, res) {
     try {
         const allPosts = await readJSON('utils/posts.json');
         const filterDate = req.params.filter_date;
+        if(filterDate != "default"){
         if (filterDate == "" || filterDate == undefined) {
             return res.status(500).json({ "message": "Filter date cannot be empty" });
         }
@@ -25,6 +26,7 @@ async function viewBlogs(req, res) {
         if (isNaN(selected_date.getTime())) {
             return res.status(400).json({ message: "Invalid date format" });
         }
+    }
         const filteredPosts = filterDate != "default" ? allPosts.filter(post => post.date === filterDate) : allPosts;
 
         return res.status(200).json(filteredPosts);
