@@ -30,10 +30,17 @@ function filter() {
     }
     const current_date = new Date();
     const selected_date = new Date(filter_date);
+    one_year_ago = new Date();
+    one_year_ago.setFullYear(current_date.getFullYear() - 1);
     if (selected_date > current_date) {
         alert("Filter date cannot be in the future");
         return;
     }
+    if (selected_date < one_year_ago) {
+        alert("Filter date cannot be more than 1 year ago");
+        return;
+    }
+    
     viewBlogsFiltered(filter_date);
 }
 

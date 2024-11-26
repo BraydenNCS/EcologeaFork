@@ -16,7 +16,7 @@ app.get('/view-posts', viewPosts);
 app.delete('/delete-post/:id', deletePost);
 
 const { viewBlogs } = require('./utils/ReadBlogsUtils')
-app.get('/view-blogs/:filter_date', viewBlogs);
+app.get('/view-blogs/:filter_date?', viewBlogs);
 
 const { addPost } = require('./utils/AddBlogsUtils')
 app.post('/add-post', addPost);
