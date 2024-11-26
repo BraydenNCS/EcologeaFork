@@ -41,3 +41,4 @@ function clear_filter() {
     document.getElementById("filter_date").value = "";
     viewBlogsFiltered("default");
 }
+
