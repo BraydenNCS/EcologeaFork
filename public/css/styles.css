@@ -109,3 +109,7 @@ button:hover {
     display: inline-block;
     text-align: center;
 }
+
+#filter-container{
+  padding-top: 20px;
+}

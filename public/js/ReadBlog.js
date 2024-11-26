@@ -23,10 +23,21 @@ function viewBlogsFiltered(filter_date) {
     request.send();
 }
 function filter() {
-    filter_date = document.getElementById("filter_date").value;
+    const filter_date = document.getElementById("filter_date").value;
     if (filter_date === "") {
-        filter_date = "default"
+        alert("Filter field cannot be empty");
+        return;
     }
-    console.log(filter_date);
+    const current_date = new Date();
+    const selected_date = new Date(filter_date);
+    if (selected_date > current_date) {
+        alert("Filter date cannot be in the future");
+        return;
+    }
     viewBlogsFiltered(filter_date);
+}
+
+function clear_filter() {
+    document.getElementById("filter_date").value = "";
+    viewBlogsFiltered("default");
 }
