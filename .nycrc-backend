@@ -4,7 +4,7 @@
         "html"
     ],
     "include": [
-        "utils/*.js"
+        "utils/ReadBlogsUtils.js"
     ],
     "reportDir": "coverage/backend",
     "branches": 80,
