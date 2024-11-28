@@ -40,7 +40,7 @@ function filter() {
         alert("Filter date cannot be more than 1 year ago");
         return;
     }
-    
+
     viewBlogsFiltered(filter_date);
 }
 
