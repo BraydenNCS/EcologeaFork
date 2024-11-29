@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "backend-test": "nyc --nycrc-path .nycrc-backend mocha",
     "frontend-instrument": "xcopy public instrumented /I /E /Y & nyc instrument public instrumented",
-    "frontend-test": "rmdir -r .nyc_output & nyc --nycrc-path .nycrc-frontend cypress run"
+    "frontend-test": "rmdir -r .nyc_output & nyc --nycrc-path .nycrc-frontend cypress run",
+    "frontend-test-edge": "rmdir -r .nyc_output & nyc --nycrc-path .nycrc-frontend cypress run --browser edge"
+
   },
   "author": "",
   "license": "ISC",
