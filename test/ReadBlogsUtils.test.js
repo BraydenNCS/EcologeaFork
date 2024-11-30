@@ -49,7 +49,7 @@ describe('Blog API', () => {
                     done();
                 });
         });
-        // Test suite for invalid date format
+        //invalid date format
         it('should return an error for invalid date format', (done) => {
             chai.request(baseUrl)
                 .get('/view-blogs/2023-0-0')
@@ -60,7 +60,7 @@ describe('Blog API', () => {
                     done();
                 });
         });
-        // Test suite for dates in the future
+        //dates in the future
         it('should return an error for a future date', (done) => {
             chai.request(baseUrl)
                 .get('/view-blogs/2025-12-01')
@@ -71,7 +71,7 @@ describe('Blog API', () => {
                     done();
                 });
         });
-        // Test suite for dates 1 year in the past
+        // dates 1 year in the past
         it('should return an error for a date older than 1 year', (done) => {
             chai.request(baseUrl)
                 .get('/view-blogs/2023-11-11')
@@ -82,7 +82,7 @@ describe('Blog API', () => {
                     done();
                 });
         });
-        // Test suite for no blogs found
+        //no blogs found
         it('should return an empty array if no blogs match the date', (done) => {
             chai.request(baseUrl)
                 .get('/view-blogs/2024-11-11')
