@@ -5,7 +5,8 @@ const chai = require('chai');
 const chaiHttp = require('chai-http');
 chai.use(chaiHttp);
 let baseUrl;
-const assert = require('assert');
+const sinon = require('sinon');
+const assert = require('chai').assert;
 
 describe('Blog API', () => {
     before(async () => {
@@ -56,7 +57,7 @@ describe('Blog API', () => {
                 .end((err, res) => {
                     assert.strictEqual(res.status, 400);
                     assert.strictEqual(typeof res.body, 'object');
-                    assert.strictEqual(res.body.message, 'Invalid date format');
+                    assert.strictEqual(res.body.message, 'Invalid date format', 'The error message should be "Invalid date format"');
                     done();
                 });
         });
@@ -67,7 +68,7 @@ describe('Blog API', () => {
                 .end((err, res) => {
                     assert.strictEqual(res.status, 500);
                     assert.strictEqual(typeof res.body, 'object');
-                    assert.strictEqual(res.body.message, 'Filter date cannot be in the future');
+                    assert.strictEqual(res.body.message, 'Filter date cannot be in the future', 'The error message should be "Filter date cannot be in the future"');
                     done();
                 });
         });
@@ -78,7 +79,7 @@ describe('Blog API', () => {
                 .end((err, res) => {
                     assert.strictEqual(res.status, 500);
                     assert.strictEqual(typeof res.body, 'object');
-                    assert.strictEqual(res.body.message, 'Filter date cannot be more than 1 year ago');
+                    assert.strictEqual(res.body.message, 'Filter date cannot be more than 1 year ago', 'The error message should be "Filter date cannot be more than 1 year ago"');
                     done();
                 });
         });
