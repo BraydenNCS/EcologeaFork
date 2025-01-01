@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "backend-test": "nyc --nycrc-path .nycrc-backend mocha"
-
   },
   "author": "",
   "license": "ISC",
