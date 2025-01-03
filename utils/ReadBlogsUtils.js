@@ -34,7 +34,7 @@ async function viewBlogs(req, res) {
         return res.status(500).json({ message: error.message });
     }
 }
-// wasd
+
 module.exports = {
     viewBlogs
 };
