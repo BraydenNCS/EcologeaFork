@@ -4,6 +4,6 @@ services:
       context: .
       dockerfile: Dockerfile 
     image: memberlite/rms-docker-img:latest
-    container_name: rms-docker-container
+    container_name: rms-docker-container-ecologea
     ports:
       - "8000:5050" 
