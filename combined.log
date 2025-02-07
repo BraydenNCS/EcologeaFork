@@ -1,2 +1,6 @@
 info: Server running at: http://localhost:5050! {"timestamp":"2025-02-03T12:50:59.868Z"}
 error: Example or error log {"timestamp":"2025-02-03T12:50:59.871Z"}
+info: Server running at: http://localhost:5050! {"timestamp":"2025-02-07T06:55:18.946Z"}
+error: Example or error log {"timestamp":"2025-02-07T06:55:18.950Z"}
+info: Server running at: http://localhost:5050! {"timestamp":"2025-02-07T06:59:02.452Z"}
+error: Example or error log {"timestamp":"2025-02-07T06:59:02.456Z"}

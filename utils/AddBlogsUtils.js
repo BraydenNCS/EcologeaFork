@@ -31,7 +31,7 @@ async function addPost(req, res) {
         return res.status(500).json({ message: error.message });
     }
 }
-// hi
+
 module.exports = {
     readJSON, writeJSON, addPost
 };
