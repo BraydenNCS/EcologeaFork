@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10.71% </span>
+                <span class="strong">89.28% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/28</span>
+                <span class='fraction'>25/28</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">11.53% </span>
+                <span class="strong">92.3% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/26</span>
+                <span class='fraction'>24/26</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -106,35 +106,35 @@
 <a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -145,41 +145,41 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { Blog } = require('../models/blog');
 const fs = require('fs').promises;
-async function <span class="fstat-no" title="function not covered" >readJSON(</span>filename) {
-<span class="cstat-no" title="statement not covered" >    try {</span>
-        const data = <span class="cstat-no" title="statement not covered" >await fs.readFile(filename, 'utf8');</span>
-<span class="cstat-no" title="statement not covered" >        return JSON.parse(data);</span>
+async function readJSON(filename) {
+    try {
+        const data = await fs.readFile(filename, 'utf8');
+        return JSON.parse(data);
     } catch (err) { <span class="cstat-no" title="statement not covered" >console.error(err); <span class="cstat-no" title="statement not covered" ></span>throw err; </span>}
 }
-async function <span class="fstat-no" title="function not covered" >viewBlogs(</span>req, res) {
-<span class="cstat-no" title="statement not covered" >    try {</span>
-        const allPosts = <span class="cstat-no" title="statement not covered" >await readJSON('utils/posts.json');</span>
-        const filterDate = <span class="cstat-no" title="statement not covered" >req.params.filter_date;</span>
-<span class="cstat-no" title="statement not covered" >        if(filterDate != "default"){</span>
-<span class="cstat-no" title="statement not covered" >        if (filterDate == "" || filterDate == undefined) {</span>
-<span class="cstat-no" title="statement not covered" >            return res.status(500).json({ "message": "Filter date cannot be empty" });</span>
+async function viewBlogs(req, res) {
+    try {
+        const allPosts = await readJSON('utils/posts.json');
+        const filterDate = req.params.filter_date;
+        if(filterDate != "default"){
+        if (filterDate == "" || filterDate == undefined) {
+            return res.status(500).json({ "message": "Filter date cannot be empty" });
         }
-        const current_date = <span class="cstat-no" title="statement not covered" >new Date();</span>
-        const selected_date = <span class="cstat-no" title="statement not covered" >new Date(filterDate);</span>
-        const one_year_ago = <span class="cstat-no" title="statement not covered" >new Date();</span>
-<span class="cstat-no" title="statement not covered" >        one_year_ago.setFullYear(current_date.getFullYear() - 1);</span>
-<span class="cstat-no" title="statement not covered" >        if (selected_date &gt; current_date) {</span>
-<span class="cstat-no" title="statement not covered" >            return res.status(500).json({ "message": "Filter date cannot be in the future" });</span>
-        }else <span class="cstat-no" title="statement not covered" >if (selected_date &lt; one_year_ago) {</span>
-<span class="cstat-no" title="statement not covered" >            return res.status(500).json({ "message": "Filter date cannot be more than 1 year ago" });</span>
+        const current_date = new Date();
+        const selected_date = new Date(filterDate);
+        const one_year_ago = new Date();
+        one_year_ago.setFullYear(current_date.getFullYear() - 1);
+        if (selected_date &gt; current_date) {
+            return res.status(500).json({ "message": "Filter date cannot be in the future" });
+        }else if (selected_date &lt; one_year_ago) {
+            return res.status(500).json({ "message": "Filter date cannot be more than 1 year ago" });
         }
-<span class="cstat-no" title="statement not covered" >        if (isNaN(selected_date.getTime())) {</span>
-<span class="cstat-no" title="statement not covered" >            return res.status(400).json({ message: "Invalid date format" });</span>
+        if (isNaN(selected_date.getTime())) {
+            return res.status(400).json({ message: "Invalid date format" });
         }
     }
-        const filteredPosts = <span class="cstat-no" title="statement not covered" >filterDate != "default" ? allPosts.filter(<span class="fstat-no" title="function not covered" >po</span>st =&gt; <span class="cstat-no" title="statement not covered" >post.date === filterDate)</span> : allPosts;</span>
+        const filteredPosts = filterDate != "default" ? allPosts.filter(post =&gt; post.date === filterDate) : allPosts;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        return res.status(200).json(filteredPosts);</span>
+        return res.status(200).json(filteredPosts);
     } catch (error) {
 <span class="cstat-no" title="statement not covered" >        return res.status(500).json({ message: error.message });</span>
     }
 }
-//
+&nbsp;
 module.exports = {
     viewBlogs
 };
@@ -190,7 +190,7 @@ module.exports = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-01-13T07:07:00.957Z
+                at 2025-02-07T09:00:26.816Z
             </div>
         <script src="prettify.js"></script>
         <script>
