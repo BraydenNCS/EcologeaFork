@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile 
-    image: memberlite/rms-docker-img:v5
+    image: memberlite/rms-docker-img:v6
     container_name: rms-docker-container-ecologea
     ports:
       - "8000:5050" 

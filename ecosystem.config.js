@@ -1,6 +1,6 @@
 module.exports = {
-    apps : [{
-        name : "PM2",
-        script: "index.js"
-    }]
+  apps : [{
+    name   : "app1",
+    script : "./index.js"
+  }]
 }
