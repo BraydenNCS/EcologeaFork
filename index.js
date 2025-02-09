@@ -13,6 +13,9 @@ app.use(express.static("./public"));
 const collectDefaultMetrics = client.collectDefaultMetrics;
 collectDefaultMetrics();
 
+const statusMonitor = require('express-status-monitor');
+app.use(statusMonitor());
+
 const requestCounter = new client.Counter({
     name: 'http_requests_total',
     help: 'Total number of HTTP requests',
